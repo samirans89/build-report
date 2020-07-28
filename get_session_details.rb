@@ -11,7 +11,7 @@ offset = 0
 File.write('output.html',"<!DOCTYPE html><html><head><style>table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;}td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;}</style></head><body><table>")
 File.write('output.html', "<tr><th>Build Name</th><th>Project Name</th><th>Session Name</th><th>Browser Name</th><th>Browser Version</th><th>OS Name</th><th>OS Version</th><th>Device</th><th>Status</tr>", mode: 'a')
 loop do
-  base_url = "https://#{ARGV[1]}:#{ARGV[2]}@api.browserstack.com/automate/builds/#{build_id}/sessions.json?limit=#{limit}&offset=#{offset}"
+  base_url = "https://#{BROWSERSTACK_USERNAME}:#{BROWSERSTACK_ACCESS_KEY}@api.browserstack.com/automate/builds/#{build_id}/sessions.json?limit=#{limit}&offset=#{offset}"
   results = RestClient.get(base_url)
   results_json = JSON.parse(results.body)
   if !results_json.empty?
