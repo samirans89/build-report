@@ -35,7 +35,7 @@ steps:
 
 - script: |
     gem install rest-client && gem install json gem install net/http
-    ruby get_session_details.rb ${{ build_id }} ${{ username }} ${{ access_key }}
+    ruby get_session_details.rb $(build_id) $(username) $(access_key)
   displayName: 'Generate build report'
 
 
