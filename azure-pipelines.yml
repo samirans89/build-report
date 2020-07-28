@@ -25,6 +25,10 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.6'
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
