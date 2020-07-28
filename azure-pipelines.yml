@@ -3,21 +3,13 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
 parameters:
 - name: build_id
   displayName: Build Id
   type: string
   default: N/A
 
-- name: username
-  displayName: BrowserStack User Name
-  type: string
-  default: N/A
-
-- name: access_key
-  displayName: BrowserStack Access Key
-  type: string
-  default: N/A
 
 trigger:
 - master
@@ -29,6 +21,9 @@ pool:
 
 steps:
 
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BStack Demo Account'
 - task: UseRubyVersion@0
   inputs:
     versionSpec: '>= 2.6'
