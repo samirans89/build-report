@@ -10,7 +10,6 @@ parameters:
   type: string
   default: N/A
 
-
 trigger:
 - master
 
