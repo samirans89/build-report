@@ -28,8 +28,6 @@ pool:
 
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
 - task: UseRubyVersion@0
   inputs:
@@ -37,10 +35,8 @@ steps:
 
 - script: |
     gem install rest-client && gem install json gem install net/http
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    ruby get_session_details.rb $build_id $username $access_key
-  displayName: 'Run a multi-line script'
+    ruby get_session_details.rb ${{ build_id }} ${{ username }} ${{ access_key }}
+  displayName: 'Generate build report'
 
 
 
