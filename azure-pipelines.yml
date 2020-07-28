@@ -34,8 +34,8 @@ steps:
     versionSpec: '>= 2.6'
 
 - script: |
-    gem install rest-client && gem install json gem install net/http
-    ruby get_session_details.rb $(build_id) $(username) $(access_key)
+    gem install rest-client && gem install json
+    ruby get_session_details.rb ${{ parameters.build_id }} ${{ parameters.username }} ${{ parameters.access_key }}
   displayName: 'Generate build report'
 
 
