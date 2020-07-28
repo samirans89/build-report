@@ -43,5 +43,5 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: 'output.txt'
-    artifact: 'output'
+    artifact: 'build_report'
     publishLocation: 'pipeline'
