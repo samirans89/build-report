@@ -42,6 +42,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$AGENT_BUILDDIRECTORY/output.txt'
+    targetPath: 'output.txt'
     artifact: 'output'
     publishLocation: 'pipeline'
