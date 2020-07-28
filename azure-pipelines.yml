@@ -36,6 +36,7 @@ steps:
     versionSpec: '>= 2.6'
 
 - script: |
+    script: gem install rest-client && gem install json gem install net/http
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     ruby get_session_details.rb $build_id $username $access_key
