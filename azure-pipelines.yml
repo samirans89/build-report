@@ -25,13 +25,15 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-- task: UseRubyVersion@0
-  inputs:
-    versionSpec: '>= 2.6'
+
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.6'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
