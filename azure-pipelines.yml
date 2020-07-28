@@ -19,10 +19,9 @@ pool:
 
 
 steps:
-
 - task: BrowserStackConfig@0
   inputs:
-    BrowserStackServiceEndPoint: 'BStack Demo Account'
+    BrowserStackServiceEndPoint: 'BrowserStack Creds July 2020'
 - task: UseRubyVersion@0
   inputs:
     versionSpec: '>= 2.6'
