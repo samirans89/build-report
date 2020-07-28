@@ -30,7 +30,7 @@ steps:
 
 - script: |
     gem install rest-client && gem install json
-    ruby get_session_details.rb ${{ parameters.build_id }} ${{ parameters.username }} ${{ parameters.access_key }}
+    ruby get_session_details.rb ${{ parameters.build_id }}
   displayName: 'Generate build report'
 
 
